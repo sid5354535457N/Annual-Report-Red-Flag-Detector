@@ -1,5 +1,6 @@
 """Evidence-grounded Gemini Q&A for the annual-report red-flag detector."""
 
+import logging
 import os
 import re
 from typing import Any
@@ -718,6 +719,7 @@ score as a validated probability of risk.
     except GeminiAssistantError:
         raise
     except Exception as error:
+        logging.exception("Gemini API request failed")
         error_text = str(error).lower()
 
         if (
