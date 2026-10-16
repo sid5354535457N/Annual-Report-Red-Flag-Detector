@@ -1,0 +1,23 @@
+# Python virtual environments
+.venv/
+venv/
+
+# Secrets
+.env
+.streamlit/secrets.toml
+
+# Local tests and test outputs
+tests/
+.pytest_cache/
+.coverage
+
+# Local datasets, audits, and annual reports
+data/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# macOS and editor files
+.DS_Store
+.vscode/
